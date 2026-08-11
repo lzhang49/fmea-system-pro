@@ -1,0 +1,89 @@
+{
+  "version": "v2.1",
+  "updated": "2026-08-11",
+  "S1_main": {
+    "k_value": 5,
+    "max_run_max": 3,
+    "pullback_min_pct": 10,
+    "hold_days": 3,
+    "buy_fee_bps": 3,
+    "sell_fee_bps": 13,
+    "init_cap": 100000
+  },
+  "S2_stop_loss": {
+    "enabled": true,
+    "abs_stop_pct": 5,
+    "trail_stop_pct": 3,
+    "check_times": ["14:00", "14:30"],
+    "status": "stage1_validated",
+    "backtest": "卡玛1.20→4.40，回撤-37%→-16%，年化45%→72%（opt_full_16y.csv 139条样本）"
+  },
+  "S3_circuit_breaker": {
+    "enabled": true,
+    "soft_pause_pct": 15,
+    "hard_pause_pct": 20,
+    "hard_pause_days": 10,
+    "liquidation_pct": 30,
+    "cooldown_days": 5,
+    "status": "stage2"
+  },
+  "S4_concentration": {
+    "enabled": true,
+    "max_single_pos_pct": 30,
+    "max_industry_pct": 50,
+    "max_holdings": 3,
+    "status": "stage1"
+  },
+  "S5_signal_grade": {
+    "enabled": true,
+    "grade_s_multiplier": 1.5,
+    "grade_a_multiplier": 1.0,
+    "grade_b_multiplier": 0.5,
+    "score_chi_next": 1,
+    "min_pullback": 15,
+    "max_pullback": 30,
+    "status": "stage3"
+  },
+  "S6_dynamic_hold": {
+    "enabled": true,
+    "quick_take_profit_pct": 5,
+    "extend_profit_pct": 3,
+    "max_extend_days": 1,
+    "status": "stage3"
+  },
+  "S7_liquidity": {
+    "enabled": true,
+    "min_avg_amount_5d": 50000000,
+    "max_buy_pct_of_volume": 0.05,
+    "min_float_market_cap": 500000000,
+    "status": "stage1"
+  },
+  "S8_black_swan": {
+    "enabled": true,
+    "index_crash_pct": 7,
+    "index_crash_2d_pct": 10,
+    "pause_days": 20,
+    "panic_threshold_stocks": 2,
+    "status": "stage4"
+  },
+  "S9_pilot_leader": {
+    "enabled": false,
+    "priority": "P1",
+    "category": "收益优化",
+    "init_position_pct": 7,
+    "add_position_pct": 18,
+    "min_avg_amount_5d": 300000000,
+    "min_float_market_cap": 1000000000,
+    "max_float_market_cap": 20000000000,
+    "max_consecutive_boards": 3,
+    "first_board_window": 5,
+    "second_board_cutoff": "10:30",
+    "sector_limit_up_min": 3,
+    "take_profit_pct": 8,
+    "stop_loss_break_first_open": true,
+    "force_exit_no_3rd_board": true,
+    "max_hold_days": 5,
+    "status": "stage1_pilot",
+    "note": "需要1-2个月小仓位验证胜率，默认OFF必须手动开"
+  }
+}
