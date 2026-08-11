@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.coverage
+
+# 临时文件
+_tmp_check.py
+*.tmp
+*.bak
+
+# 大型中间数据文件（>1MB 留本地，不入仓）
+backtest_events.csv
+backtest_events_v2.csv
+backtest_events_v3.csv
+backtest_events_v5.csv
+backtest_events_v*.csv
+opt_full_16y.csv
+opt_full_data.csv
+events_pos_2b.csv
+events_daban_2b.csv
+events_5y.csv
+events_lht.csv
+events_lht_*.csv
+equity_curve_10w.csv
+equity_detail_10w.csv
+trades_lht_main.csv
+best_strategy_equity.csv
+best_strategy_trades.csv
+strategy_v2_equity.csv
+strategy_v2_trades.csv
+
+# 日志
+*.log
+backtest_*.log
+lht_*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# 输出 HTML（生成产物不入仓，必要时本地打开）
+# report.html / sim_*.html / *_report.html 等按需保留
+
+# Memory & ref dirs（个人工作笔记不入仓）
+.workbuddy/
+.策略清单.ref/
